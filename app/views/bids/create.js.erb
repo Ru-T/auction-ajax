@@ -1,21 +1,2 @@
-$("#div.row.collapse").first().html("<%=j(render 'bid_form', locals: {item: @item})%>");
-$("form").html("<%= j(render partial: 'items/bid_form', locals: (bid: @bid))%>")
-
-// $('#highest-bid-show').prop("value", "<%= @bid.item.highest_bid_amount %>");
-// $("#nothing").prop("value") != <%= @item.highest_bid_amount %>)
-//
-//
-// function updateHighBid(){
-//   $("#nothing").html("<%=j(render 'highbid')%>");
-// }
-//
-// function checkHighestBid(){
-//   setTimeout(function() {
-//     $.ajax({
-//       url: "/items/<%= @item.id %>",
-//       type: "GET",
-//       dataType: "script"
-//     })}, 1500);
-// };
-//
-// setInterval(checkHighestBid, 1500);
+$("#div.row.collapse").first().html("<%=j(render partial: 'items/bid_form')%>");
+$("form").html("<%= j(render partial: 'items/bid_form')%>")
