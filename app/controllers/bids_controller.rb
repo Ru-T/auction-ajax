@@ -4,6 +4,7 @@ class BidsController < ApplicationController
     @bid = Bid.new(bid_params)
     @bid.save
   end
+ 
 
   private
     # Only allow a trusted parameter "white list" through.

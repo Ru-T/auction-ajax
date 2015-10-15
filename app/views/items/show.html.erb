@@ -22,21 +22,8 @@
 
   <h3>Highest bid</h3>
 
-<%= render 'bid' %>
+  <%= render 'bid' %>
 
 </div>
 <div class="small-4 columns">
 </div>
-
-<script>
-function checkPrice(){
-  setTimeout(function() {
-    $.ajax({
-      url: "/items/<%= @item.id %>",
-      type: "GET",
-      dataType: "script"
-    })}, 1500);
-    console.log("Updated price");
-};
-setInterval(checkPrice, 1500);
-</script>
