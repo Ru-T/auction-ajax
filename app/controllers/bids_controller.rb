@@ -3,8 +3,6 @@ class BidsController < ApplicationController
   def create
     @bid = Bid.new(bid_params)
     @bid.save
-    render partial 'bid', locals: {bid: bid}
-    render partial 'highbid', locals: {bid: bid}
   end
 
   private

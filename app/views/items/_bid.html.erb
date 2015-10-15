@@ -1,3 +1,8 @@
+<div class="row collapse">
+  <div class="small-2 columns"><span class="prefix">$</span></div>
+  <div class="small-10 columns"><%= text_field_tag :nothing, @item.highest_bid_amount, disabled: true %></div>
+</div>
+
 <%= form_for @bid, remote:true do |f| %>
   <h3>Your Bid</h3>
   <%= f.hidden_field :item_id %>

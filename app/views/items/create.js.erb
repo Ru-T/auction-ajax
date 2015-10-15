@@ -1,3 +1,10 @@
-$("#bid_amount").html("<%=j(render 'bid')%>");
+$("#bid_amount").load("<%=j(render 'bid')%>");
 $("#bid_amount").html("")
-$("#nothing").html("<%=j(render 'highbid')%>");
+var update = $("#nothing").append("<%=j(render 'highbid')%>");
+
+
+function updateHighBid(){
+  $("#nothing").html("<%=j(render 'highbid')%>");
+}
+
+setInterval( "updateHighBid()", 15000 );
