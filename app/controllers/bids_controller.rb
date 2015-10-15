@@ -6,7 +6,6 @@ class BidsController < ApplicationController
     @bid = Bid.new(item: @item, amount: @item.next_bid_amount)
   end
 
-
   private
     # Only allow a trusted parameter "white list" through.
     def bid_params

@@ -16,4 +16,16 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+
+function ajaxCall( {
+  response = $.ajax({
+    url: "/refresh/",
+  })
+})
+
+function() {
+if ($("#bid-refresh").length > 0) {
+  window.SetInterval('ajaxCall()', 15000);
+}
+  $(document).foundation();
+});
